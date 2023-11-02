@@ -1,0 +1,37 @@
+<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/>
+Fazer jogo cliques por segundo
+<input id="rur" placeholder="tamanho px"></input>
+<input id="rui" placeholder="nome"></input>
+<input id="ruu" placeholder="tamanho px"></input>
+<select id="rr">
+  <option value="green">verde</option>
+  <option value="white">branco</option>
+  <option value="blue">azul</option>
+  <option value="yellow">amarelo</option>
+</select><button onclick="rt()">gerar</button>
+<script>
+var point = 0;
+function fun(){
+point += 1;
+document.getElementById("tre").innerHTML = point;
+if(point == 1){
+setTimeout(fin, 1000);
+}
+}
+function fin(){
+window.location.reload();
+alert("voce clicou" + point + "em um segundo");
+}
+function rt(){
+var pixel = document.getElementById("rur").value;
+var nome = document.getElementById("rui").value;
+var pixe = document.getElementById("ruu").value;
+var pix = document.getElementById("rr").value;
+var dx = '<button id="tre" onclick="fun()" style="width:'+ pixel +'px; height:' + pixe +'px; background-color:'+ pix +'">'+ nome +'</button>';
+document.getElementById("tw").innerHTML = dx;
+}
+</script><br><br>
+<center><a id="tw"></a></center>
